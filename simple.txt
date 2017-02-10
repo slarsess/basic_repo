@@ -1,0 +1,70 @@
+Stevens-MacBook-Pro:Desktop stevenlarsen$ ls
+DojoAssignments
+Screen Shot 2017-02-08 at 1.33.17 PM.png
+basic_repo
+index.html
+newtest
+test
+Stevens-MacBook-Pro:Desktop stevenlarsen$ cd basic_repo/
+Stevens-MacBook-Pro:basic_repo stevenlarsen$ git init
+Initialized empty Git repository in /Users/stevenlarsen/Desktop/basic_repo/.git/
+Stevens-MacBook-Pro:basic_repo stevenlarsen$ git remote add origin https://github.com/slarsess/basic_repo.git
+Stevens-MacBook-Pro:basic_repo stevenlarsen$ git push -u origin master
+error: src refspec master does not match any.
+error: failed to push some refs to 'https://github.com/slarsess/basic_repo.git'
+Stevens-MacBook-Pro:basic_repo stevenlarsen$ git remote add origin https://github.com/slarsess/basic_repo.git
+fatal: remote origin already exists.
+Stevens-MacBook-Pro:basic_repo stevenlarsen$ git push -u origin master
+error: src refspec master does not match any.
+error: failed to push some refs to 'https://github.com/slarsess/basic_repo.git'
+Stevens-MacBook-Pro:basic_repo stevenlarsen$ git add .
+Stevens-MacBook-Pro:basic_repo stevenlarsen$ git commit -m "initial set_up"
+On branch master
+
+Initial commit
+
+nothing to commit
+Stevens-MacBook-Pro:basic_repo stevenlarsen$ git push -u origin master
+error: src refspec master does not match any.
+error: failed to push some refs to 'https://github.com/slarsess/basic_repo.git'
+Stevens-MacBook-Pro:basic_repo stevenlarsen$ touch random_content.txt
+Stevens-MacBook-Pro:basic_repo stevenlarsen$ vi random_content.txt 
+Stevens-MacBook-Pro:basic_repo stevenlarsen$ git push -u origin master
+error: src refspec master does not match any.
+error: failed to push some refs to 'https://github.com/slarsess/basic_repo.git'
+Stevens-MacBook-Pro:basic_repo stevenlarsen$ git add .
+Stevens-MacBook-Pro:basic_repo stevenlarsen$ sit status
+-bash: sit: command not found
+Stevens-MacBook-Pro:basic_repo stevenlarsen$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   random_content.txt
+
+Stevens-MacBook-Pro:basic_repo stevenlarsen$ git commit -m "first attempt"
+[master (root-commit) af346a0] first attempt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 random_content.txt
+Stevens-MacBook-Pro:basic_repo stevenlarsen$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+Stevens-MacBook-Pro:basic_repo stevenlarsen$ git push -u origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 269 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/slarsess/basic_repo.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+Stevens-MacBook-Pro:basic_repo stevenlarsen$ git checkout -b revised_project
+Switched to a new branch 'revised_project'
+Stevens-MacBook-Pro:basic_repo stevenlarsen$ vi random_content.txt 
+Stevens-MacBook-Pro:basic_repo stevenlarsen$ touch simple.txt
+Stevens-MacBook-Pro:basic_repo stevenlarsen$ vi simple.txt 
+Stevens-MacBook-Pro:basic_repo stevenlarsen$
